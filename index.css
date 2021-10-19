@@ -1,0 +1,262 @@
+/* the html font size is at 10px(62.5% for easy calculation */
+
+html{
+    font-size: 62.5%;
+}
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    /* overflow:hidden; */
+}
+body{
+    margin:0;padding:0;
+    background:linear-gradient(to right bottom,rgba(128, 128, 128, 2.0),rgba(211, 211, 211, 0.97)),url("./4.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.page-container{
+    width:100%;
+    height:auto;
+    position:relative;
+    top:0;
+}
+
+.nav-bar{
+    position:sticky;
+    /* background:linear-gradient(to right bottom,rgba(128, 128, 128, 2.0),rgba(211, 211, 211, 0.97)); */
+    left:5%;
+    top:0%;
+    font-weight: bold;
+    padding-top: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background:rgba(119, 136, 153,0.3);
+    width:100%;
+    height:15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(0,0,0,.1);
+    
+} 
+
+
+.toggle{
+    width:4rem;
+    height:4rem;
+    border-radius: 50%;
+    background:rgba(128, 128, 128, 2.0);
+    text-align: center;
+    margin-top: 1rem;
+    padding-top: 13px;
+    padding-left: 9px;
+    cursor:pointer;
+    /* outline-offset: 2rem; */
+}
+.toggle span{
+    width:2.2rem;
+    height:2.5px;
+    display:block;
+    background:black;
+    margin-bottom: 2px;
+}
+
+.title{
+    width:50%;
+    display:inline-block;
+    align-self: center;
+}
+
+.title span:last-child{
+    color:rgba(73, 3, 3, 0.808);
+    font-size: 3rem;
+    
+    
+}
+.title img{
+    width:1.5rem;
+}
+
+/* this is for when the class of open is added */
+.toggle.open > span:first-child {
+    transform-origin: 5px;
+    transform: rotate(45deg); 
+}
+  .toggle.open > span:nth-child(2) {
+    opacity: 0; 
+}
+  .toggle.open > span:last-child {
+    transform-origin: 5px;
+    transform: rotate(-45deg); }
+
+.menu{
+    position:fixed;
+    z-index: 2;
+    margin-top: 3rem;
+    margin-left: 1rem;
+    background:lightgrey ;
+    /* padding: 3rem; */
+    width:0%;
+    /* height:50%; */
+    overflow:hidden;
+    text-align: center;
+    border-left:2px solid black;
+    transition:all 0.5s;
+}
+.menu a{
+    display:block;
+    color:black;
+    font-size: 2rem;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+    letter-spacing: 1.2rem;
+    
+}
+
+
+.menu a:hover{
+    background:grey;
+    transform:translateY(3px);
+}
+
+section{
+    width:75%;
+    max-width:70rem;
+    margin:0 auto;
+    height:auto;
+    margin-top: 15rem;
+    overflow:visible;
+}
+
+.intro-content{
+    font-size: 1.7rem;
+    border-bottom: 2px solid rgba(0,0,0,.1);
+}
+
+.whitepaper{
+    width:50%;
+    margin:0rem auto;
+    margin-top: 6rem;
+}
+
+.whitepaper span{
+    background:crimson;
+    padding:1rem;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    color:black;
+}
+.whitepaper span a{
+    color:black;
+}
+.features h2,
+.tokenomics h2,
+.roadmap h2{
+    font-size: 3rem;
+}
+.features h2 span,
+.tokenomics h2 span,
+.roadmap h2 span
+{
+    color:lightsalmon;
+}
+
+.items-container{
+    width:70%;
+    margin:0 auto;
+    text-align: center;
+    display:grid;
+    gap:5rem 10rem;
+}
+.items img{
+    width:40px;
+}
+.items h4{
+    font-size: 1.5rem;
+}
+.items p{
+    font-size: 1.3rem;
+    letter-spacing: 0.4px;
+    line-height: 1.2;
+}
+.tokenomics .tokenp{
+    font-size: 2rem;
+    letter-spacing: 3px;
+}
+.token-container{
+    display:grid;
+    gap:2rem;
+}
+.token-items{
+    width: 16rem;
+    padding: 4rem;
+    margin: 3rem auto;
+    margin-bottom: 1rem;
+    text-align: center;
+    border-radius: 50%;
+    border:1px solid black;
+    
+   transition:all .5s;
+}
+.token-items p{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.token-items:hover{
+    background:#12cf12;
+}
+.roadmap ul{
+    margin-left: 7rem;
+}
+
+.roadmap ul li{
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+    margin-bottom: 2rem;
+}
+
+
+@media screen and (min-width:76rem){
+    .items-container{
+        grid-template-columns: repeat(2,1fr);
+    
+    }
+    .token-container{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+.social-media{
+    width:30%;
+    position:fixed;
+    top:32rem;
+    left:2rem;
+
+}
+.social-media a img{
+    margin-bottom: 1rem;
+    width:30px;
+    display:block;
+}
+
+
+footer{
+    text-align:center ;
+    height:auto;
+    padding:2rem;
+    margin-bottom: 2rem;
+    margin-top: 6rem;
+    background:rgba(119, 136, 153,0.1);
+}
+
+footer p{
+    font-size: 1.5rem;
+}
+
+
+
+
+
+
